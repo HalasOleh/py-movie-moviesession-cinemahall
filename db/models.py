@@ -47,7 +47,6 @@ class MovieSession(models.Model):
     movie = models.ForeignKey(Movie,
                               related_name="sessions",
                               on_delete=models.CASCADE)
-    test = models.IntegerField(default=0)
 
     def __str__(self) -> str:
         return f"{self.movie} {self.show_time}"
